@@ -29,3 +29,5 @@
 
 # Visual Studio
 *.sdf
+Debug/
+*.ipch
