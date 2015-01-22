@@ -80,6 +80,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LieCircle.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="LineTools.h" />
     <ClInclude Include="Point.h" />
@@ -90,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Geometrie.cpp" />
+    <ClCompile Include="LieCircle.cpp" />
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="LineTools.cpp" />
     <ClCompile Include="Point.cpp" />

@@ -39,6 +39,9 @@
     <ClInclude Include="TransformationTools.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="LieCircle.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -60,6 +63,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="TransformationTools.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="LieCircle.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

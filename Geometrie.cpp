@@ -8,6 +8,7 @@
 #include "Line.h"
 #include "Transformation.h"
 #include "TransformationTools.h"
+#include "LieCircle.h"
 
 using namespace std;
 using namespace Eigen;
@@ -74,9 +75,31 @@ int main(int argc, char** argv)
 	assert (br == bb);
 	assert (cr == cb);
 
-	//TODO: add tests for TransformationTools
+	//Hausaufgabe zu Lie-Kreisen
+	cout << endl << "Lie-Circles" << endl;
+	LieCircle a (2, 3, 3);
+	Point p (Point::euclidianVector_t(1,1));
+	Point ey (Point::euclidianVector_t(0,1));
+	LieCircle b = LieCircle::fromPoint(p);
+	pair<LieCircle, LieCircle> c = LieCircle::fromLine(ey*p);
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
+	cout << "c = " << c.first << "  and " << c.second << endl;
+	assert (a.touch(a));
+	assert (b.touch(b));
+	assert (c.first.touch(c.first));
+	assert (c.second.touch(c.second));
+	assert (b.touch(c.first));
+	vector<LieCircle> results1 = LieCircle::apollonius(a,b,c.first);
+	vector<LieCircle> results2 = LieCircle::apollonius(a,b,c.second);
+	cout << "solutions:" << endl;
+	for (LieCircle c : results1)
+		cout << c << endl;
+	cout << " and" << endl;
+	for (LieCircle c : results2)
+		cout << c << endl;
 
-	cout << "Enter zum Verlassen";
+	cout << endl << "Enter zum Verlassen";
 	cin.get();
 	return 0;
 }
