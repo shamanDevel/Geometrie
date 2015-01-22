@@ -31,3 +31,5 @@
 *.sdf
 Debug/
 *.ipch
+.localhistory/*
+Geometrie.opensdf
